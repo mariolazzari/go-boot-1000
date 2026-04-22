@@ -33,3 +33,56 @@
 - redeclaration
 
 ### Convert values
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	speed := 100
+	force := 2.5
+
+	speed = speed * int(force)
+	fmt.Println(speed)
+
+	speed = 100
+	speed = int(float64(speed) * force)
+	fmt.Println(speed)
+
+}
+```
+
+### Terminal input
+
+[os](https://pkg.go.dev/os)
+[Slices](https://go.dev/tour/moretypes/7)
+
+```sh
+go build -o greeter
+./greeter ciao mario
+```
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	fmt.Printf("%#v\n", os.Args)
+
+	fmt.Printf("Path: %s\n", os.Args[0])
+	fmt.Printf("Total args: %d\n", len(os.Args))
+}
+```
+
+### Naming conventions
+
+- use first few letters
+- use complete words in larger scope
+- use mixed caps
+- use capital letters for acronym
+- do not use underscores
