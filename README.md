@@ -233,3 +233,78 @@ func main() {
 ```
 
 #### Strings ex3
+
+1. Initialize the name variable by getting input from the command line
+2. Use concatenation operator to concatenate it with the raw string literal below
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	name := os.Args[1]
+
+	msg := `hi ` + name + `!
+how are you?`
+
+	fmt.Println(msg)
+}
+```
+
+#### Strungs ex4
+
+Change the following program to work with unicode characters.
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+	"unicode/utf8"
+)
+
+func main() {
+	length := utf8.RuneCountInString(os.Args[1])
+	fmt.Println(length)
+}
+```
+
+#### Strings ex5
+
+Change the Banger program the work with Unicode characters.
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+	"strings"
+	"unicode/utf8"
+)
+
+func main() {
+	msg := os.Args[1]
+
+	s := msg + strings.Repeat("!", utf8.RuneCountInString(msg))
+
+	fmt.Println(s)
+}
+```
+
+#### Strings ex6
+
+1. Look at the documentation of strings package
+2. Find a function that changes the letters into lowercase
+3. Get a value from the command-line
+4. Print the given value in lowercase letters
+
+```go
+
+```
