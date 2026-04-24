@@ -141,3 +141,30 @@ func main() {
 	fmt.Println(utf8.RuneCountInString(name))
 }
 ```
+
+### String banger
+
+[Repeat](https://pkg.go.dev/strings#Repeat)
+[ToUpper](https://pkg.go.dev/strings#ToUpper)
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	msg := os.Args[1]
+	l := len(msg)
+	s := msg + strings.Repeat("!", l)
+	s = strings.ToUpper(s)
+	fmt.Println(s)
+
+	s = strings.Repeat("!", l) + s
+	fmt.Println(s)
+
+}
+```
