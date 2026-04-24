@@ -168,3 +168,68 @@ func main() {
 
 }
 ```
+
+### Strings exercises
+
+#### String ex1
+
+1. Change the following program
+2. It should use a raw string literal instead
+
+```go
+func main() {
+	// HINTS:
+	// \\ equals to backslash character
+	// \n equals to newline character
+
+	path := "c:\\program files\\duper super\\fun.txt\n" +
+		"c:\\program files\\really\\funny.png"
+
+	path2 := `c:\program files\duper super\fun.txt
+c:\program files\really\funny.png
+`
+
+	fmt.Println(path)
+	fmt.Println(path2)
+
+}
+```
+
+#### String ex2
+
+1. Change the following program
+2. It should use a raw string literal instead
+
+```go
+func main() {
+	// HINTS:
+	// \t equals to TAB character
+	// \n equals to newline character
+	// \" equals to double-quotes character
+
+	json := "\n" +
+		"{\n" +
+		"\t\"Items\": [{\n" +
+		"\t\t\"Item\": {\n" +
+		"\t\t\t\"name\": \"Teddy Bear\"\n" +
+		"\t\t}\n" +
+		"\t}]\n" +
+		"}\n"
+
+	json2 := `
+{
+	"Items": [{
+		"Item": {
+			"name: "Teddy Bear"
+				}
+		}]
+	}
+`
+
+	fmt.Println(json)
+	fmt.Println(json2)
+
+}
+```
+
+#### Strings ex3
