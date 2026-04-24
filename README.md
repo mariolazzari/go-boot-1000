@@ -306,5 +306,74 @@ func main() {
 4. Print the given value in lowercase letters
 
 ```go
+package main
+
+import (
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	lower := strings.ToLower(os.Args[1])
+	fmt.Println(lower)
+}
+```
+
+#### String ex7
+
+1. Look at the documentation of strings package
+2. Find a function that trims the spaces from the given string
+3. Trim the text variable and print it
+
+```go
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	msg := `
+
+	The weather looks good.
+I should go and play.
+
+
+
+	`
+
+	fmt.Println(strings.TrimSpace(msg))
+}
+```
+
+#### Strings ex8
+
+1. Look at the documentation of strings package
+2. Find a function that trims the spaces from only the right-most part of the given string
+3. Trim it from the right part only
+4. Print the number of characters it contains.
+
+```go
+package main
+
+import (
+	"fmt"
+	"strings"
+	"unicode/utf8"
+)
+
+func main() {
+	name := "inanç           "
+	fmt.Println(utf8.RuneCountInString(strings.TrimRight(name, " ")))
+}
+```
+
+### Constants and iota
+
+[enums](https://blog.learngoprogramming.com/golang-const-type-enums-iota-bc4befd096d3)
+
+```go
 
 ```
