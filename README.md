@@ -375,5 +375,112 @@ func main() {
 [enums](https://blog.learngoprogramming.com/golang-const-type-enums-iota-bc4befd096d3)
 
 ```go
+package main
 
+import "fmt"
+
+// ---------------------------------------------------------
+// EXERCISE: Iota Months
+//
+//  1. Initialize the constants using iota.
+//  2. You should find the correct formula for iota.
+//
+// RESTRICTIONS
+//  1. Remove the initializer values from all constants.
+//  2. Then use iota once for initializing one of the
+//     constants.
+//
+// EXPECTED OUTPUT
+//  9 10 11
+// ---------------------------------------------------------
+
+const (
+	Jan = iota + 1
+	Feb
+	Mar
+	Apr
+	May
+	Jun
+	Jul
+	Aug
+	Sep
+	Oct
+	Nov
+	Dec
+)
+
+func main() {
+
+	fmt.Println(Sep, Oct, Nov)
+}
+```
+
+#### Iota ex2
+
+```go
+package main
+
+import "fmt"
+
+// ---------------------------------------------------------
+// EXERCISE: Iota Months #2
+//
+//  1. Initialize multiple constants using iota.
+//  2. Please follow the instructions inside the code.
+//
+// EXPECTED OUTPUT
+//  1 2 3
+// ---------------------------------------------------------
+
+func main() {
+	// HINT: This is a valid constant declaration
+	//       Blank-Identifier can be used in place of a name
+	const zero = iota
+	//    ^- this is just a name
+
+	// Now, use iota and initialize the following constants
+	// "automatically" to 1, 2, and 3 respectively.
+	const (
+		Jan = iota + 1
+		Feb
+		Mar
+	)
+
+	// This should print: 1 2 3
+	// Not: 0 1 2
+	fmt.Println(Jan, Feb, Mar)
+}
+```
+
+### iota ex3
+
+```go
+package main
+
+import "fmt"
+
+// ---------------------------------------------------------
+// EXERCISE: Iota Seasons
+//
+//  Use iota to initialize the season constants.
+//
+// HINT
+//  You can change the order of the constants.
+//
+// EXPECTED OUTPUT
+//  12 3 6 9
+// ---------------------------------------------------------
+
+func main() {
+	// NOTE : You should remove all the initializers below
+	//        first. Then use iota to fix it.
+	const (
+		Spring = (iota + 1) * 3
+		Summer
+		Fall
+		Winter
+	)
+
+	fmt.Println(Winter, Spring, Summer, Fall)
+}
 ```
